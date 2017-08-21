@@ -1,2 +1,2 @@
 # RealmExample
-![alt tex](https://raw.githubusercontent.com/positr0nix/RealmExample/master/device-2017-08-21-155046.png =250x)
+![alt tex](https://raw.githubusercontent.com/positr0nix/RealmExample/master/device-2017-08-21-155046.png) {:height="36px" width="36px"}
