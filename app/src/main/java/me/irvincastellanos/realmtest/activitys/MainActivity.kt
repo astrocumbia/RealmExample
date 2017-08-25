@@ -1,8 +1,10 @@
 package me.irvincastellanos.realmtest.activitys
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import io.realm.Realm
 
 import me.irvincastellanos.realmtest.R
@@ -12,6 +14,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 import me.irvincastellanos.realmtest.adapters.PersonAdapter
 import me.irvincastellanos.realmtest.model.Person
 import io.realm.RealmConfiguration
+import android.support.design.widget.Snackbar
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +34,10 @@ class MainActivity : AppCompatActivity() {
         val adapter = PersonAdapter(toListModel(getData(Realm.getDefaultInstance())))
         rcMainView.layoutManager = LinearLayoutManager(this)
         rcMainView.adapter = adapter
+
+        floatActionBtnMain.setOnClickListener {
+            startActivity(Intent(this, RegisterContactActivity::class.java))
+        }
 
         btnSave.setOnClickListener {
             val id: Long = editTextId.text.toString().toLong()
